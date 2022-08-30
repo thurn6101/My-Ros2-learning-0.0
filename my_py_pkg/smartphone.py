@@ -4,7 +4,6 @@ from rclpy.node import Node
 
 from example_interfaces.msg import String
 
-
 class SmartphoneNode(Node):  # MODIFY NAME
     def __init__(self):
         super().__init__("smartphone")  # MODIFY NAME
