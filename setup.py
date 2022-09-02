@@ -24,7 +24,7 @@ setup(
             "robot_news_station = my_py_pkg.robot_news_station:main",
             "smartphone = my_py_pkg.smartphone:main",
             "Number_pub = my_py_pkg.Number_publisher:main",
-            "counter_node_name = my_py_pkg.Node:main" # Edit Here
+            "counter_ = my_py_pkg.number_counter:main" 
         ],
     },
 )

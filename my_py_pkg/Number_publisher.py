@@ -11,11 +11,14 @@ class Number_publisher(Node): # MODIFY NAME
         self.publisher_ = self.create_publisher(Int64, "number", 10)
         self.timer_ = self.create_timer(1, self.send_num)
         self.get_logger().info("Num_Pub has been started")
+        self.i = 2
 
     def send_num(self):
         msg = Int64()
-        msg.data = 1
+        msg.data = self.i
         self.publisher_.publish(msg)
+        self.get_logger().info("%d" %msg.data)
+
 
 
 def main(args=None):
