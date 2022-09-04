@@ -1,0 +1,22 @@
+[0.426s] Invoking command in '/home/thirawat/ros2_ws/src/build/my_py_pkg': PYTHONPATH=/home/thirawat/ros2_ws/src/install/my_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/thirawat/ros2_ws/src/install/my_py_pkg --editable --build-directory /home/thirawat/ros2_ws/src/build/my_py_pkg/build --no-deps install_data --install-dir /home/thirawat/ros2_ws/src/install/my_py_pkg
+[0.581s] running develop
+[0.668s] running egg_info
+[0.668s] writing my_py_pkg.egg-info/PKG-INFO
+[0.668s] writing dependency_links to my_py_pkg.egg-info/dependency_links.txt
+[0.668s] writing entry points to my_py_pkg.egg-info/entry_points.txt
+[0.668s] writing requirements to my_py_pkg.egg-info/requires.txt
+[0.668s] writing top-level names to my_py_pkg.egg-info/top_level.txt
+[0.694s] reading manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+[0.694s] writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+[0.720s] running build_ext
+[0.720s] Creating /home/thirawat/ros2_ws/src/install/my_py_pkg/lib/python3.8/site-packages/my-py-pkg.egg-link (link to .)
+[0.721s] Installing Number_pub script to /home/thirawat/ros2_ws/src/install/my_py_pkg/lib/my_py_pkg
+[0.722s] Installing add_two_ints_server script to /home/thirawat/ros2_ws/src/install/my_py_pkg/lib/my_py_pkg
+[0.722s] Installing counter_ script to /home/thirawat/ros2_ws/src/install/my_py_pkg/lib/my_py_pkg
+[0.722s] Installing py_node script to /home/thirawat/ros2_ws/src/install/my_py_pkg/lib/my_py_pkg
+[0.722s] Installing robot_news_station script to /home/thirawat/ros2_ws/src/install/my_py_pkg/lib/my_py_pkg
+[0.722s] Installing smartphone script to /home/thirawat/ros2_ws/src/install/my_py_pkg/lib/my_py_pkg
+[0.722s] 
+[0.722s] Installed /home/thirawat/ros2_ws/src/build/my_py_pkg
+[0.722s] running install_data
+[0.742s] Invoked command in '/home/thirawat/ros2_ws/src/build/my_py_pkg' returned '0': PYTHONPATH=/home/thirawat/ros2_ws/src/install/my_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/thirawat/ros2_ws/src/install/my_py_pkg --editable --build-directory /home/thirawat/ros2_ws/src/build/my_py_pkg/build --no-deps install_data --install-dir /home/thirawat/ros2_ws/src/install/my_py_pkg
