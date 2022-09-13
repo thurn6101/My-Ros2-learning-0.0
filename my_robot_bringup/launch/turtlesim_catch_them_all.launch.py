@@ -13,7 +13,7 @@ def generate_launch_description():
         package="turtlesim_catch_them_all",
         executable="turtle_spawner",
         parameters=[
-            {"spawn_frequency": 0.5},
+            {"spawn_frequency": 2},
             {"turtle_name_prefix": "my_turtle"}
         ]
     )
