@@ -11,12 +11,14 @@ from my_robot_interfaces.msg import TurtleArray
 from my_robot_interfaces.srv import CatchTurtle
 
 
-
 class TurtleControllerNode(Node):  # MODIFY NAME
     def __init__(self):
         super().__init__("turtle_controller")  # MODIFY NAME
+        self.declare_parameter("catch_closest_turtle_first", True)
+
         self.turtle_to_catch_ = None
-        self.catch_closest_turtle_first_ = True
+        self.catch_closest_turtle_first_ = self.get_parameter(
+            "catch_closest_turtle_first").value
         self.pose_ = None
         self.cmd_vel_publisher_ = self.create_publisher(
             Twist, "turtle1/cmd_vel", 10)
