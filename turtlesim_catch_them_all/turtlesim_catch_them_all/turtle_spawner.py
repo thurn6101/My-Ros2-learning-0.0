@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from functools import partial
+from http import client
 import random
 import math
 import rclpy
@@ -7,6 +8,7 @@ from rclpy.node import Node
 
 from turtlesim.srv import Spawn
 from turtlesim.srv import Kill
+from std_srvs.srv import Empty 
 from my_robot_interfaces.msg import Turtle
 from my_robot_interfaces.msg import TurtleArray
 from my_robot_interfaces.srv import CatchTurtle
@@ -24,10 +26,16 @@ class TurtleSpawner(Node):  # MODIFY NAME
         self.alive_turtles_ = []
         self.alive_turtles_publisher_ = self.create_publisher(
             TurtleArray, "alive_turtles", 10)
+        self.clear_line_timer_ = self.create_timer(5.0,self.clear_line_server)
         self.spawn_turtle_timer_ = self.create_timer(
             1.0/self.spawn_frequency_, self.spawn_new_turtle)
         self.catch_turtle_service_ = self.create_service(
             CatchTurtle, "catch_turtle", self.callback_catch_turtle)
+
+    def clear_line_server(self):
+        client = self.create_client(Empty, "empty")
+        while not client.wait_for_service(1.0):
+            node.get_logger().warn("Waiting for Server...")
 
     def callback_catch_turtle(self, request, response):
         self.call_kill_server(request.name)
